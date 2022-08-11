@@ -1,0 +1,664 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bohema</title>
+</head>
+
+<body>
+    <div class="modal" id="success">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="img/close.svg" alt="Close"></span>
+                </button>
+                <div class="modal-body">
+                    <div class="add-new-media-container">
+                        <div class="adnm-title">Add New Media</div>
+                        <div class="adnm-sub-title">Image, video, GIF, music</div>
+                        <div class="file-upload">
+                            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*"/>
+                            
+                            <!-- თუ ფოტოა გამოვა ეს დივი -->
+                            <div class="file-upload-content">
+                                <div class="file-upload-image"></div>
+                                <div class="image-title-wrap">
+                                    <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                            src="img/delete.svg" alt="Delete"></button>
+                                </div>
+                            </div>
+                            
+                            <!-- თუ ვიდეო ან სხვა ფაილია გამოვა ეს დივი -->
+                            <!-- <div class="file-upload-content">
+                                <div class="input-upload-container">
+                                    <img src="img/play-upl.svg" alt="Play">
+                                    <div class="inp-cont"></div>
+                                    <button type="button" onclick="removeUpload()" class="remove-file">remove</button>
+                                </div>
+                            </div> -->
+                            <div>Drag and drop your file here</div>
+                            <div class="upload-txt">Supports jpg, png, mp3, mp4, gif </div>
+                            <button class="file-upload-btn" type="button"
+                                onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                        </div>
+                        <div class="dp-modal">
+                            <select class="select2">
+                                <option value="1">Recently Added</option>
+                                <option value="2">Recently Added</option>
+                                <option value="3">Recently Added</option>
+                                <option value="4">Recently Added</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Name your file</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="field">
+                            <label>Name your file</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="field">
+                            <label>Enter text</label>
+                            <textarea placeholder="Enter text"></textarea>
+                        </div>
+                        <button class="button">Add to Library</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1 class="h1">Bohema</h1>
+        <div class="flex flex-a-center flex-j-between">
+            <a href="activity.html" class="notification-btn"><img src="img/notification.svg" alt="Bell"></a>
+            <div class="user-dp">
+                <div class="user-image" style="background-image: url(./img/user.png);"></div>
+                <div>
+                    <div class="user-name">Salome Vastaveze</div>
+                    <div>Admin</div>
+                </div>
+                <img src="img/arr-d.svg" alt="Arrow Down" class="arrow-d">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <nav>
+                <a href="dashboard.html" class="active-a">Home</a>
+                <a href="team.html">Team</a>
+                <a href="chat.html">Chat</a>
+                <a href="users.html">Users</a>
+                <a href="library.html">Library</a>
+                <a href="articles.html">Articles</a>
+                <a href="magazines.html">Magazines</a>
+                <a href="subscriptions.html">Subscriptions</a>
+                <a href="payments.html">Payments</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="right-panel">
+                <div class="panel-h">
+                    <div class="flex flex-a-center">
+                        <h2>Articles</h2>
+                        <a href=""><img src="img/home.svg" alt="Home"></a>
+                    </div>
+                    <button class="button fill-button" data-bs-toggle="modal" data-bs-target="#success">Create New Article
+                        <img src="img/plus.svg" alt="Plus"></button>
+                </div>
+                <div class="drafts-container">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Drafts
+                            </button>
+                          </h2>
+                          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              
+                        <div class="magazine-box">
+                            <div class="magazine">
+                                <div class="flex">
+                                    <img src="img/draft1.png" alt="" class="magazine-img">
+                                    <div>
+                                        <div class="magazine-title">
+                                            March 2021 Issue
+                                            <div class="magazine-time">
+                                                Last Edited On: Mar 3, 2021
+                                            </div>
+                                            <div class="dots-btn">
+                                                <img src="img/blue-dots.svg" alt="Dots">
+                                            </div>
+                                        </div>
+                                        <div class="pages-qwt">2 pages added</div>
+                                        <div class="magazine-activity magazine-eddit"><img src="img/clock.svg" alt="Clock">View Activity</div>
+                                        <div class="magazine-comment magazine-eddit"><img src="img/comment.svg" alt="comment">View Comments</div>
+                                        <div class="magazine-view">View<img src="img/blue-arr-r.svg" alt="Arrow Right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="magazine">
+                                <div class="flex">
+                                    <img src="img/draft2.png" alt="" class="magazine-img">
+                                    <div>
+                                        <div class="magazine-title">
+                                            March 2021 Issue
+                                            <div class="magazine-time">
+                                                Last Edited On: Mar 3, 2021
+                                            </div>
+                                            <div class="dots-btn">
+                                                <img src="img/blue-dots.svg" alt="Dots">
+                                            </div>
+                                        </div>
+                                        <div class="pages-qwt">2 pages added</div>
+                                        <div class="magazine-activity magazine-eddit"><img src="img/clock.svg" alt="Clock">View Activity</div>
+                                        <div class="magazine-comment magazine-eddit"><img src="img/comment.svg" alt="comment">View Comments</div>
+                                        <div class="magazine-view">View<img src="img/blue-arr-r.svg" alt="Arrow Right"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="filter-div">
+                    <div class="flex flex-a-center">
+                        <select class="select2">
+                            <option value="1">Recently Added</option>
+                            <option value="2">Recently Added</option>
+                            <option value="3">Recently Added</option>
+                            <option value="4">Recently Added</option>
+                        </select>
+                        <div class="sort-select">
+                            <select class="select2">
+                                <option value="1">Category</option>
+                                <option value="2">Sort By</option>
+                                <option value="3">Sort By</option>
+                                <option value="4">Sort By</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="search-div">
+                        <input type="text" placeholder="Search for media" class="input">
+                    </div>
+                </div>
+                <div class="right-panel-inside articles-main">
+                    <div class="swiper-button-next swiper-next"><img src="img/swiper-r.svg" alt=""></div>
+                    <div class="swiper-button-prev swiper-prev"><img src="img/swiper-l.svg" alt=""></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="library-container">
+                                <div class="library-box">
+                                    <div style="background-image: url(./img/library1.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library2.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library3.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library1.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library2.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library3.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="swiper-slide">
+                            <div class="library-container">
+                                <div class="library-box">
+                                    <div style="background-image: url(./img/library1.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library2.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library3.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library1.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library2.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library3.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div>
+                          <div class="swiper-slide">
+                            <div class="library-container">
+                                <div class="library-box">
+                                    <div style="background-image: url(./img/library1.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library2.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library3.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library1.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library2.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="library-box">
+                                    <!-- if video show play icon -->
+                                    <img src="img/play.svg" alt="Play" class="play-icon">
+                                    <div style="background-image: url(./img/library3.png);" class="library-image"></div>
+                                    <div class="library-desc">
+                                        <div class="library-title">Music Cover</div>
+                                        <div class="library-cat">Video</div>
+                                        <div class="library-bottom">
+                                            <div class="library-date">Uploaded on: 05/02/2021</div>
+                                            <div class="library-edittional">
+                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                <div class="library-dp">
+                                                    <div>Delete</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div></div>
+                        </div>
+                      </div>
+                      <div class="swiper-next"><img src="img/swiper-r.svg" alt=""></div>
+                      <div class="swiper-prev"><img src="img/swiper-l.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-next",
+          prevEl: ".swiper-prev",
+        },
+      });
+    </script>
+</body>
+
+</html>

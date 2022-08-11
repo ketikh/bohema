@@ -21,12 +21,59 @@
     <div class="modal" id="success">
         <div class="modal-dialog modal-dialog-centered lit-w-modal">
             <div class="modal-content">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="img/close.svg" alt="Close"></span>
                 </button>
                 <div class="modal-body">
-                    <div class="info-popup-text">
-                        მოთხოვნა წარმატებით შესრულდა
-                        <span>ინვოისი გადახდილია</span>
+                    <div class="add-new-media-container">
+                        <div class="adnm-title">Add New Media</div>
+                        <div class="adnm-sub-title">Image, video, GIF, music</div>
+                        <div class="file-upload">
+                            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*"/>
+                            
+                            <!-- თუ ფოტოა გამოვა ეს დივი -->
+                            <div class="file-upload-content">
+                                <div class="file-upload-image"></div>
+                                <div class="image-title-wrap">
+                                    <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                            src="img/delete.svg" alt="Delete"></button>
+                                </div>
+                            </div>
+                            
+                            <!-- თუ ვიდეო ან სხვა ფაილია გამოვა ეს დივი -->
+                            <!-- <div class="file-upload-content">
+                                <div class="input-upload-container">
+                                    <img src="img/play-upl.svg" alt="Play">
+                                    <div class="inp-cont"></div>
+                                    <button type="button" onclick="removeUpload()" class="remove-file">remove</button>
+                                </div>
+                            </div> -->
+                            <div>Drag and drop your file here</div>
+                            <div class="upload-txt">Supports jpg, png, mp3, mp4, gif </div>
+                            <button class="file-upload-btn" type="button"
+                                onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                        </div>
+                        <div class="dp-modal">
+                            <select class="select2">
+                                <option value="1">Recently Added</option>
+                                <option value="2">Recently Added</option>
+                                <option value="3">Recently Added</option>
+                                <option value="4">Recently Added</option>
+                            </select>
+                        </div>
+                        <div class="field">
+                            <label>Name your file</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="field">
+                            <label>Name your file</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="field">
+                            <label>Enter text</label>
+                            <textarea placeholder="Enter text"></textarea>
+                        </div>
+                        <button class="button">Add to Library</button>
                     </div>
                 </div>
             </div>
@@ -66,7 +113,8 @@
                         <h2>Library</h2>
                         <a href=""><img src="img/home.svg" alt="Home"></a>
                     </div>
-                    <button class="button fill-button" data-bs-toggle="modal" data-bs-target="#success">Add New Media <img src="img/plus.svg" alt="Plus"></button>
+                    <button class="button fill-button" data-bs-toggle="modal" data-bs-target="#success">Add New Media
+                        <img src="img/plus.svg" alt="Plus"></button>
                 </div>
                 <div class="filter-div">
                     <div class="flex flex-a-center">
@@ -164,7 +212,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="library-box">
+                        </div>
+                        <div class="library-box">
                             <!-- if video show play icon -->
                             <img src="img/play.svg" alt="Play" class="play-icon">
                             <div style="background-image: url(./img/library1.png);" class="library-image"></div>
@@ -235,7 +284,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="library-box">
+                        </div>
+                        <div class="library-box">
                             <!-- if video show play icon -->
                             <img src="img/play.svg" alt="Play" class="play-icon">
                             <div style="background-image: url(./img/library1.png);" class="library-image"></div>
@@ -306,7 +356,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div><div class="library-box">
+                        </div>
+                        <div class="library-box">
                             <!-- if video show play icon -->
                             <img src="img/play.svg" alt="Play" class="play-icon">
                             <div style="background-image: url(./img/library1.png);" class="library-image"></div>
@@ -367,7 +418,7 @@
     </section>
     <script>
         $('.ps').perfectScrollbar();
-        
+
         $.datepicker._updateDatepicker_original = $.datepicker._updateDatepicker;
         $.datepicker._updateDatepicker = function (inst) {
             $.datepicker._updateDatepicker_original(inst);
@@ -390,6 +441,35 @@
                 });
             },
         });
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.image-upload-wrap').hide();
+
+                    // იმიჯის შემტხვევაში
+                    $('.file-upload-image').attr('style', "background-image: url(" + e.target.result) + ")";
+                    $('.inp-cont').html(input.files[0].name);
+                    $('.file-upload-content').show();
+                    // სხვა ფაილის შემთხვევაში
+                    //   $('.image-title').html(input.files[0].name);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
     </script>
 </body>
 
