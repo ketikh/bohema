@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bohema</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="h1">Bohema</h1>
+        <div class="flex flex-a-center flex-j-between">
+            <a href="activity.html" class="notification-btn"><img src="img/notification.svg" alt="Bell"></a>
+            <div class="user-dp">
+                <div class="user-image" style="background-image: url(./img/user.png);"></div>
+                <div>
+                    <div class="user-name">Salome Vastaveze</div>
+                    <div>Admin</div>
+                </div>
+                <img src="img/arr-d.svg" alt="Arrow Down" class="arrow-d">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <nav>
+                <a href="dashboard.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="chat.html">Chat</a>
+                <a href="users.html">Users</a>
+                <a href="library.html">Library</a>
+                <a href="articles.html">Articles</a>
+                <a href="magazines.html">Magazines</a>
+                <a href="subscriptions.html">Payments</a>
+                <a href="payments.html" class="active-a">Payments</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="right-panel">
+                <div class="panel-h">
+                    <h2>Payments</h2>
+                    <a href=""><img src="img/home.svg" alt="Home"></a>
+                </div>
+                <div class="filter-div">
+                    <div class="flex flex-a-center">
+                        <div class=" blue-color">
+                            <select class="select2">
+                                <option value="1">Recently Added</option>
+                                <option value="2">Recently Added</option>
+                                <option value="3">Recently Added</option>
+                                <option value="4">Recently Added</option>
+                            </select>
+                        </div>
+                        <div class="category-select blue-color">
+                            <select class="select2">
+                                <option value="1">Category</option>
+                                <option value="2">Sort By</option>
+                                <option value="3">Sort By</option>
+                                <option value="4">Sort By</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="datepicker-div">
+                        <input type="text" class="datepicker input" placeholder="Date from">
+                        <input type="text" class="datepicker input" placeholder="Date To">
+                    </div>
+                </div>
+                <div class="right-panel-inside">
+                    <div class="c-table-container payment-table">
+                        <div class="c-table-h">
+                            <div>All Payments</div>
+                            <div>Download CSV <img src="img/download.svg" alt="Download"></div>
+                        </div>
+                        <div class="c-table">
+                            <div class="c-thead">
+                                <div class="c-th">Reference ID</div>
+                                <div class="c-th">Date</div>
+                                <div class="c-th">Price</div>
+                                <div class="c-th">User Details</div>
+                                <div class="c-th">Subscription Type</div>
+                                <div class="c-th">Status</div>
+                            </div>
+                            <div class="c-tbody">
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                                <div class="c-tr">
+                                    <div class="c-td">IN_123456</div>
+                                    <div class="c-td">Feb 25, 2021</div>
+                                    <div class="c-td">$ 10.00</div>
+                                    <div class="c-td">Amy Adams</div>
+                                    <div class="c-td">Free Subscription</div>
+                                    <div class="c-td">Renewal</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-pagination">
+                            <div>Users Per Page</div>
+                            <div class="pag-select">
+                                <select class="select2">
+                                    <option value="1">100</option>
+                                    <option value="2">1</option>
+                                    <option value="3">2</option>
+                                    <option value="4">3</option>
+                                </select>
+                            </div>
+                            <div class="num">1 - 100 of 2500</div>
+                            <div class="flex">
+                                <div class="arrows-gr"><img src="img/first-arr.svg" alt=""></div>
+                                <div class="arrows-gr"><img src="img/arr-gr-l.svg" alt=""></div>
+                                <div class="arrows-gr"><img src="img/arr-gr-r.svg" alt=""></div>
+                                <div class="arrows-gr"><img src="img/last-arr.svg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            firstDay: 1,
+            afterShow: function () {
+                $('#ui-datepicker-div').addClass('show');
+                $('.ui-datepicker select').select2({
+                    minimumResultsForSearch: -1,
+                    theme: "datepicker"
+                });
+                $('.ui-datepicker select').on("select2:open", function () {
+                    $('.select2-results').perfectScrollbar();
+                });
+            },
+        });
+
+$.datepicker._updateDatepicker_original = $.datepicker._updateDatepicker;
+$.datepicker._updateDatepicker = function (inst) {
+    $.datepicker._updateDatepicker_original(inst);
+    var afterShow = this._get(inst, 'afterShow');
+    if (afterShow)
+        afterShow.apply((inst.input ? inst.input[0] : null));  // trigger custom callback
+}
+    </script>
+</body>
+
+</html>
