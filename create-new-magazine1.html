@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="viewport" width=device-width, initial-scale=1>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bohema</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="h1">Bohema</h1>
+        <div class="flex flex-a-center flex-j-between">
+            <a href="activity.html" class="notification-btn"><img src="img/notification.svg" alt="Bell"></a>
+            <div class="user-dp">
+                <div class="user-image" style="background-image: url(./img/user.png);"></div>
+                <div>
+                    <div class="user-name">Salome Vastaveze</div>
+                    <div>Admin</div>
+                </div>
+                <img src="img/arr-d.svg" alt="Arrow Down" class="arrow-d">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <div class="right-panel upload-article-panel">
+                <div class="panel-h">
+                    <h2>Create New Magazine</h2>
+                    <div class="flex flex-a-center">
+                        <a href="dashboard.html"><img src="img/home.svg" alt="Home"></a>
+                        <a href="magazines.html" class="brdcr">Magazines</a>
+                    </div>
+                    
+                </div>
+                <div class="upl-article-cont">
+                    <!-- first step -->
+                    <div>
+                        <div class="upl-article">
+                            <div class="upl-article-steps bl-color">STEP 1 of 5</div>
+                            <div class="upl-article-title">General</div>   
+                            <div class="create-magazine-upl">
+                                <label>Magazine Cover</label>
+                                <div class="add-new-media-container">
+                                    <div class="file-upload">
+                                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                        <div class="file-upload-content">
+                                            <div class="file-upload-image"></div>
+                                            <div class="image-title-wrap">
+                                                <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                                        src="img/delete.svg" alt="Delete"></button>
+                                            </div>
+                                        </div>
+                                        <div>Drag and drop your file here</div>
+                                        <div class="upload-txt">Supports jpg, png</div>
+                                        <button class="file-upload-btn" type="button"
+                                            onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                                    </div>                                
+                                </div>
+                            </div>
+                            <div class="upl-article-field">
+                                <label>Magazine Cover</label>
+                                <div class="textarea-field">
+                                    <textarea id="field" maxlength="100" onkeyup="countChar(this)"></textarea>
+                                    <div id="charNum">0 / 100</div>
+                                </div>
+                            </div>
+                            <div class="language-dp">
+                                <select class="select2">
+                                    <option value="1">Language</option>
+                                    <option value="2">Recently Added</option>
+                                    <option value="3">Recently Added</option>
+                                    <option value="4">Recently Added</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="upl-article-buttons">
+                        <button class="button bordered-btn">Quit</button>
+                        <!-- <button class="button fill-btn">Next</button> -->
+                        <a href="create-new-magazine2.html" class="button fill-btn">Next</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function countChar(val) {
+            var maxlength = val.attributes.maxLength.value;
+            var len = val.value.length;
+            $('#charNum').text(len + ' / 100');
+            el.onkeypress = function () {
+                if (len >= max) return false;
+            };
+        };
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: "auto",
+            spaceBetween: 12,
+        });
+        $('.ps').perfectScrollbar();
+
+
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.image-upload-wrap').hide();
+                    $('.file-upload-image').attr('style', "background-image: url(" + e.target.result) + ")";
+                    $('.inp-cont').html(input.files[0].name);
+                    $('.file-upload-content').show();
+                };
+
+                reader.readAsDataURL(input.files[0]);
+
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+        $('.right-popup-close').on('click', function () {
+            $('.replace-popup').removeClass('show-popup');
+        });
+    </script>
+</body>
+
+</html>

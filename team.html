@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" width=device-width, initial-scale=1>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bohema</title>
+</head>
+
+<body>
+    <div class="modal" id="create-sprint">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="create-sprint-modal">
+                        <div class="modal-h">Create Sprint</div>
+                        <div class="field">
+                            <label>Sprint Name</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="datepicker-div field with-icon">
+                            <label>Start Date</label>
+                            <input type="text" class="datepicker white-input" placeholder="Date from">
+                            <img src="img/calendar.svg" alt="Calendar">
+                        </div>
+                        <div class="datepicker-div field with-icon">
+                            <label>End Date</label>
+                            <input type="text" class="datepicker white-input" placeholder="Date from">
+                            <img src="img/calendar.svg" alt="Calendar">
+                        </div>
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#success-create">Create Sprint</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="success-create">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="success-create">
+                        <div class="modal-h">Sprint created successfully, start creating tasks for the sprint</div>
+                        <div class="modal-btns">
+                            <button class="button bordered-btn" data-bs-dismiss="modal"
+                                aria-label="Close">Cancel</button>
+                            <a href="create-new-task.html" class="button fill-btn">Create Task</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="add-team-member">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="create-sprint-modal">
+                        <div class="modal-h">Add Team Member</div>
+                        <div class="field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <input type="text" placeholder="File name" class="white-input">
+                        </div>
+                        <div class="dp-modal field role-field">
+                            <label>Seelct Role</label>
+                            <select class="select2">
+                                <option value="1">Select One</option>
+                                <option value="2">Recently Added</option>
+                                <option value="3">Recently Added</option>
+                                <option value="4">Recently Added</option>
+                            </select>
+                        </div>
+                        <button class="button" data-bs-toggle="modal" data-bs-target="#success-send-invitation">Send Invitation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="success-send-invitation">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close">close <img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="simple-text center-txt">
+                        An invite has been sent to Craig Miller (craig.miller@email.com) to join Bohema as an Editor.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1 class="h1">Bohema</h1>
+        <div class="flex flex-a-center flex-j-between">
+            <a href="activity.html" class="notification-btn"><img src="img/notification.svg" alt="Bell"></a>
+            <div class="user-dp">
+                <div class="user-image" style="background-image: url(./img/user.png);"></div>
+                <div>
+                    <div class="user-name">Salome Vastaveze</div>
+                    <div>Admin</div>
+                </div>
+                <img src="img/arr-d.svg" alt="Arrow Down" class="arrow-d">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <nav>
+                <a href="dashboard.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="chat.html">Chat</a>
+                <a href="users.html" class="active-a">Users</a>
+                <a href="library.html">Library</a>
+                <a href="articles.html">Articles</a>
+                <a href="magazines.html">Magazines</a>
+                <a href="subscriptions.html">Payments</a>
+                <a href="payments.html">Payments</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="right-panel">
+                <div class="panel-h">
+                    <div class="flex flex-a-center">
+                        <h2>Team</h2>
+                        <a href=""><img src="img/home.svg" alt="Home"></a>
+                    </div>
+                    <button class="button fill-btn" data-bs-toggle="modal" data-bs-target="#create-sprint">Create
+                        Sprint</button>
+                        <!-- when task tab is active show create sprint button  -->
+                        <!-- when team tab is active show add team member button  -->
+                    <button class="button fill-btn" data-bs-toggle="modal" data-bs-target="#add-team-member">Add Team Member <img src="img/plus.svg" alt="Add"></button>
+                </div>
+                <div class="right-panel-inside">
+                    <div class="team-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="task-tab" data-bs-toggle="tab"
+                                    data-bs-target="#task" type="button" role="tab" aria-controls="task"
+                                    aria-selected="true">Tasks</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="team-tab" data-bs-toggle="tab" data-bs-target="#team"
+                                    type="button" role="tab" aria-controls="team" aria-selected="false">Team
+                                    Members</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="role-tab" data-bs-toggle="tab" data-bs-target="#role"
+                                    type="button" role="tab" aria-controls="role" aria-selected="true">Roles</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="task" role="tabpanel" aria-labelledby="task-tab">
+                                <div class="tab-inside">
+                                    <ul class="nav nav-tabs" role="tablist">
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link active" id="all-tab" data-bs-toggle="tab"
+                                                data-bs-target="#all" type="button" role="tab" aria-controls="all"
+                                                aria-selected="true">All</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="open-tab" data-bs-toggle="tab"
+                                                data-bs-target="#open" type="button" role="tab" aria-controls="open"
+                                                aria-selected="false">Open</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="completed-tab" data-bs-toggle="tab"
+                                                data-bs-target="#completed" type="button" role="tab"
+                                                aria-controls="completed" aria-selected="false">COMPLETED</button>
+                                        </li>
+                                        <li class="nav-item" role="presentation">
+                                            <button class="nav-link" id="backlog-tab" data-bs-toggle="tab"
+                                                data-bs-target="#backlog" type="button" role="tab"
+                                                aria-controls="backlog" aria-selected="false">BACKLOG</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane fade show active" id="all" role="tabpanel"
+                                            aria-labelledby="all-tab">
+                                            <div class="sprint-name">Ongoing - Sprint 4</div>
+                                            <div class="c-table-container sprint-table">
+                                                <div class="sprint-th">
+                                                    <div class="sprint-td">Task ID</div>
+                                                    <div class="sprint-td">Task Title</div>
+                                                    <div class="sprint-td">Created On</div>
+                                                    <div class="sprint-td">Due On</div>
+                                                    <div class="sprint-td">Assigned To</div>
+                                                    <div class="sprint-td">Status</div>
+                                                    <div class="sprint-td">Create task +</div>
+                                                </div>
+                                                <div class="sprint-tbody">
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sprint-name">Completed - Sprint 3</div>
+                                            <div class="c-table-container sprint-table">
+                                                <div class="sprint-th">
+                                                    <div class="sprint-td">Task ID</div>
+                                                    <div class="sprint-td">Task Title</div>
+                                                    <div class="sprint-td">Created On</div>
+                                                    <div class="sprint-td">Due On</div>
+                                                    <div class="sprint-td">Assigned To</div>
+                                                    <div class="sprint-td">Status</div>
+                                                    <div class="sprint-td">Create task +</div>
+                                                </div>
+                                                <div class="sprint-tbody">
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sprint-tr">
+                                                        <div class="sprint-td">#1234</div>
+                                                        <div class="sprint-td">Complete Article 04</div>
+                                                        <div class="sprint-td">Mar 31, 2021</div>
+                                                        <div class="sprint-td">Apr 25, 2021</div>
+                                                        <div class="sprint-td">Salome</div>
+                                                        <div class="sprint-td status-td">
+                                                            <div>IN PROGRESS</div>
+                                                        </div>
+                                                        <div class="sprint-td additional-td">
+                                                            <div><img src="img/arr-both.svg" alt="Arrow"></div>
+                                                            <div class="library-edittional">
+                                                                <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>View task</div>
+                                                                    <div>Re-assign task</div>
+                                                                    <div>Change status</div>
+                                                                    <div>Delete task</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="open" role="tabpanel" aria-labelledby="open-tab">
+                                            test</div>
+                                        <div class="tab-pane fade show" id="completed" role="tabpanel"
+                                            aria-labelledby="completed-tab">test</div>
+                                        <div class="tab-pane fade" id="backlog" role="tabpanel"
+                                            aria-labelledby="backlog-tab">test</div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="team-tab">
+                                <div class="team-pane">
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div style="background-image: url(./img/person3.png);"></div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div>CM</div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div style="background-image: url(./img/person3.png);"></div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div style="background-image: url(./img/person3.png);"></div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div style="background-image: url(./img/person3.png);"></div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div style="background-image: url(./img/person3.png);"></div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                    <div class="team-boxes">
+                                        <div class="person-block">
+                                            <div class="person-img">
+                                                <div style="background-image: url(./img/person3.png);"></div>
+                                            </div>
+                                            <div>
+                                                <div class="person-name">Shawn Mendes</div>
+                                                <div class="person-txt">Main Admin</div>
+                                            </div>
+                                        </div>
+                                        <div class="sm-txt">Lorem ipsum dolor sit, amet consectetur</div>
+                                        <div class="sm-txt mbb">Lorem ipsum dolor</div>
+                                        <div class="show-more">
+                                            <div class="ongoing-task">
+                                                <div class="tt">ONGOING TASKS</div>
+                                                <div class="task-table-h">
+                                                    <div class="task-table-td">Task ID</div>
+                                                    <div class="task-table-td">Due Date</div>
+                                                    <div class="task-table-td">Status</div>
+                                                </div>
+                                                <div class="task-table-b">
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                    <div class="task-table-tr">
+                                                        <div class="task-table-td">#1234</div>
+                                                        <div class="task-table-td">Apr 12, 2021</div>
+                                                        <div class="task-table-td status-td"><div>IN PROGRESS</div></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="show-more-inside"><span class="more">Show more</span> <span class="less">Show less</span> <img src="img/arr-d.svg" alt="Arrow Down"></div>
+                                        </div>                                  
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="role" role="tabpanel" aria-labelledby="role-tab">111111</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        $('.show-more').on('click', function(){
+            $(this).toggleClass('show-ong');
+        });
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            firstDay: 1,
+            afterShow: function () {
+                $('#ui-datepicker-div').addClass('show');
+                $('.ui-datepicker select').select2({
+                    minimumResultsForSearch: -1,
+                    theme: "datepicker"
+                });
+                $('.ui-datepicker select').on("select2:open", function () {
+                    $('.select2-results').perfectScrollbar();
+                });
+            },
+        });
+
+        $.datepicker._updateDatepicker_original = $.datepicker._updateDatepicker;
+        $.datepicker._updateDatepicker = function (inst) {
+            $.datepicker._updateDatepicker_original(inst);
+            var afterShow = this._get(inst, 'afterShow');
+            if (afterShow)
+                afterShow.apply((inst.input ? inst.input[0] : null));  // trigger custom callback
+        }
+    </script>
+</body>
+
+</html>
