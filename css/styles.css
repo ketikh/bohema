@@ -3339,6 +3339,9 @@ h2.accordion-header button {
 .sprint-name {
     color: #787878;
     margin: 24px 0 16px;
+    display: inline-flex;
+    align-items: center;
+    position: relative;
 }
 
 .sprint-tr .library-edittional {
@@ -3628,6 +3631,42 @@ h2.accordion-header button {
 
 .tab-inside .nav-tabs .nav-link {
     font-size: 16px;
+}
+
+.pmnt .search-div {
+    right: 0;
+}
+
+.pmnt .datepicker-div input:first-child {
+    margin-left: 0;
+}
+
+.filter-div.pmnt {
+    padding: 0;
+}
+
+.no-mrg {
+    margin: 0;
+}
+
+.with-tb {
+    padding-top: 24px;
+}
+
+.with-tabs-cont .tab-inside:after {
+    display: none;
+}
+
+.with-tabs-cont .nav-item {
+    margin-right: 52px;
+}
+
+.magazine-td-pg {
+    margin-right: 15px;
+}
+
+.sprint-name .library-edittional {
+    margin-left: 10px;
 }
 
 @media only screen and (max-width: 1400px) {

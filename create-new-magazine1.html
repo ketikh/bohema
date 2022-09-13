@@ -48,46 +48,182 @@
                 <div class="upl-article-cont">
                     <!-- first step -->
                     <div>
-                        <div class="upl-article">
+                        <div class="upl-article with-tabs-cont">
                             <div class="upl-article-steps bl-color">STEP 1 of 5</div>
-                            <div class="upl-article-title">General</div>   
-                            <div class="create-magazine-upl">
-                                <label>Magazine Cover</label>
-                                <div class="add-new-media-container">
-                                    <div class="file-upload">
-                                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
-                                        <div class="file-upload-content">
-                                            <div class="file-upload-image"></div>
-                                            <div class="image-title-wrap">
-                                                <button type="button" onclick="removeUpload()" class="remove-image"><img
-                                                        src="img/delete.svg" alt="Delete"></button>
+                            <div class="upl-article-title no-mrg">General</div>
+                            
+                            <div class="tab-pane fade show active">
+                                <div class="tab-inside">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <button class="nav-link active" data-bs-toggle="tab"
+                                                data-bs-target="#web-eng" type="button">Web Eng</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#mobile-eng" type="button">Mobile Eng</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#web-geo" type="button">Web Geo</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#mobile-geo" type="button">Mobile Geo</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content with-tb">
+                                        <div class="tab-pane fade show active" id="web-eng">
+                                            <div class="create-magazine-upl">
+                                                <label>Magazine Cover</label>
+                                                <div class="add-new-media-container">
+                                                    <div class="file-upload">
+                                                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                                        <div class="file-upload-content">
+                                                            <div class="file-upload-image"></div>
+                                                            <div class="image-title-wrap">
+                                                                <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                                                        src="img/delete.svg" alt="Delete"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div>Drag and drop your file here</div>
+                                                        <div class="upload-txt">Supports jpg, png</div>
+                                                        <button class="file-upload-btn" type="button"
+                                                            onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                                                    </div>                                
+                                                </div>
+                                            </div>
+                                            <div class="upl-article-field">
+                                                <label>Magazine Cover</label>
+                                                <div class="textarea-field">
+                                                    <textarea id="field" maxlength="100" onkeyup="countChar(this)"></textarea>
+                                                    <div id="charNum">0 / 100</div>
+                                                </div>
+                                            </div>
+                                            <div class="language-dp">
+                                                <select class="select2">
+                                                    <option value="1">Language</option>
+                                                    <option value="2">Recently Added</option>
+                                                    <option value="3">Recently Added</option>
+                                                    <option value="4">Recently Added</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div>Drag and drop your file here</div>
-                                        <div class="upload-txt">Supports jpg, png</div>
-                                        <button class="file-upload-btn" type="button"
-                                            onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
-                                    </div>                                
+                                        <div class="tab-pane fade" id="mobile-eng">
+                                            <div class="create-magazine-upl">
+                                                <label>Magazine Cover</label>
+                                                <div class="add-new-media-container">
+                                                    <div class="file-upload">
+                                                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                                        <div class="file-upload-content">
+                                                            <div class="file-upload-image"></div>
+                                                            <div class="image-title-wrap">
+                                                                <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                                                        src="img/delete.svg" alt="Delete"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div>Drag and drop your file here</div>
+                                                        <div class="upload-txt">Supports jpg, png</div>
+                                                        <button class="file-upload-btn" type="button"
+                                                            onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                                                    </div>                                
+                                                </div>
+                                            </div>
+                                            <div class="upl-article-field">
+                                                <label>Magazine Cover</label>
+                                                <div class="textarea-field">
+                                                    <textarea id="field" maxlength="100" onkeyup="countChar(this)"></textarea>
+                                                    <div id="charNum">0 / 100</div>
+                                                </div>
+                                            </div>
+                                            <div class="language-dp">
+                                                <select class="select2">
+                                                    <option value="1">Language</option>
+                                                    <option value="2">Recently Added</option>
+                                                    <option value="3">Recently Added</option>
+                                                    <option value="4">Recently Added</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="web-geo">
+                                            <div class="create-magazine-upl">
+                                                <label>Magazine Cover</label>
+                                                <div class="add-new-media-container">
+                                                    <div class="file-upload">
+                                                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                                        <div class="file-upload-content">
+                                                            <div class="file-upload-image"></div>
+                                                            <div class="image-title-wrap">
+                                                                <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                                                        src="img/delete.svg" alt="Delete"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div>Drag and drop your file here</div>
+                                                        <div class="upload-txt">Supports jpg, png</div>
+                                                        <button class="file-upload-btn" type="button"
+                                                            onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                                                    </div>                                
+                                                </div>
+                                            </div>
+                                            <div class="upl-article-field">
+                                                <label>Magazine Cover</label>
+                                                <div class="textarea-field">
+                                                    <textarea id="field" maxlength="100" onkeyup="countChar(this)"></textarea>
+                                                    <div id="charNum">0 / 100</div>
+                                                </div>
+                                            </div>
+                                            <div class="language-dp">
+                                                <select class="select2">
+                                                    <option value="1">Language</option>
+                                                    <option value="2">Recently Added</option>
+                                                    <option value="3">Recently Added</option>
+                                                    <option value="4">Recently Added</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="mobile-geo">
+                                            <div class="create-magazine-upl">
+                                                <label>Magazine Cover</label>
+                                                <div class="add-new-media-container">
+                                                    <div class="file-upload">
+                                                        <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                                                        <div class="file-upload-content">
+                                                            <div class="file-upload-image"></div>
+                                                            <div class="image-title-wrap">
+                                                                <button type="button" onclick="removeUpload()" class="remove-image"><img
+                                                                        src="img/delete.svg" alt="Delete"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div>Drag and drop your file here</div>
+                                                        <div class="upload-txt">Supports jpg, png</div>
+                                                        <button class="file-upload-btn" type="button"
+                                                            onclick="$('.file-upload-input').trigger( 'click' )">Browse Files</button>
+                                                    </div>                                
+                                                </div>
+                                            </div>
+                                            <div class="upl-article-field">
+                                                <label>Magazine Cover</label>
+                                                <div class="textarea-field">
+                                                    <textarea id="field" maxlength="100" onkeyup="countChar(this)"></textarea>
+                                                    <div id="charNum">0 / 100</div>
+                                                </div>
+                                            </div>
+                                            <div class="language-dp">
+                                                <select class="select2">
+                                                    <option value="1">Language</option>
+                                                    <option value="2">Recently Added</option>
+                                                    <option value="3">Recently Added</option>
+                                                    <option value="4">Recently Added</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="upl-article-field">
-                                <label>Magazine Cover</label>
-                                <div class="textarea-field">
-                                    <textarea id="field" maxlength="100" onkeyup="countChar(this)"></textarea>
-                                    <div id="charNum">0 / 100</div>
-                                </div>
-                            </div>
-                            <div class="language-dp">
-                                <select class="select2">
-                                    <option value="1">Language</option>
-                                    <option value="2">Recently Added</option>
-                                    <option value="3">Recently Added</option>
-                                    <option value="4">Recently Added</option>
-                                </select>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                     <div class="upl-article-buttons">
+                        <button class="button fill-btn">Save</button>
                         <button class="button bordered-btn">Quit</button>
                         <!-- <button class="button fill-btn">Next</button> -->
                         <a href="create-new-magazine2.html" class="button fill-btn">Next</a>

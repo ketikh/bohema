@@ -173,7 +173,7 @@
                 <div class="upl-article-cont">
                     <!-- first step -->
                     <div>
-                        <div class="upl-article">
+                        <div class="upl-article with-tabs-cont">
                             <div class="flex flex-a-center flex-j-between">
                                 <div class="create-mag-step">
                                     <div class="upl-article-steps bl-color">STEP 2 of 5</div>
@@ -183,171 +183,582 @@
                             </div>
                             <div class="flex flex-a-center flex-j-between">
                                 <div>Some short description about adding articles to magazines</div>
-                                <div class="preview-btn">Magazine Preview</div>
+                                <div class="fullscreen-h">Fullscreen view <img src="img/full-screen-b.svg" alt="Full Screen"></div>
                             </div>
-                            <div class="magaz-table">
-                                <div class="magazine-th">                                    
-                                    <div class="magazine-td"></div><!-- empty field is necessary -->
-                                    <div class="magazine-td">Details</div>
-                                    <div class="magazine-td">No of Pages</div>
-                                    <div class="magazine-td">Select User Access</div>
-                                    <div class="magazine-td"></div><!-- empty field is necessary -->
-                                </div>
-                                <div class="magazine-tbody">
-                                    <div class="magaz-tr">
-                                        <div class="magazine-td">C</div>
-                                        <div class="magazine-td magazin-poster-td">
-                                            <img src="img/table-magazine.png" alt="Magazine">
-                                            <div class="poster-title">Cover Page</div>
-                                        </div>
-                                        <div class="magazine-td">9 pages</div>
-                                        <div class="magazine-td">
-                                            <label class="custom-checkbox-cont">Free Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                            <label class="custom-checkbox-cont">Subscribed Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="magazine-td">
-                                            <div class="library-edittional additional-bt">
-                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
-                                                <div class="library-dp">
-                                                    <div>Edit article</div>
-                                                    <div>View activity</div>
-                                                    <div>Delete article</div>
+                            
+                            <div class="tab-pane fade show active">
+                                <div class="tab-inside">
+                                    <ul class="nav nav-tabs">
+                                        <li class="nav-item">
+                                            <button class="nav-link active" data-bs-toggle="tab"
+                                                data-bs-target="#web-eng" type="button">Web Eng</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#mobile-eng" type="button">Mobile Eng</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#web-geo" type="button">Web Geo</button>
+                                        </li>
+                                        <li class="nav-item">
+                                            <button class="nav-link" data-bs-toggle="tab"
+                                                data-bs-target="#mobile-geo" type="button">Mobile Geo</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content with-tb">
+                                        <div class="tab-pane fade show active" id="web-eng">
+                                            <div class="magaz-table">
+                                                <div class="magazine-th">                                    
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                    <div class="magazine-td">Details</div>
+                                                    <div class="magazine-td">No of Pages</div>
+                                                    <div class="magazine-td">Select User Access</div>
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                </div>
+                                                <div class="magazine-tbody">
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">C</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">01</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">02</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">03</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">04</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
-                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
                                         </div>
-                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
-                                    </div>
-                                    <div class="magaz-tr">
-                                        <div class="magazine-td">01</div>
-                                        <div class="magazine-td magazin-poster-td">
-                                            <img src="img/table-magazine.png" alt="Magazine">
-                                            <div class="poster-title">Cover Page</div>
-                                        </div>
-                                        <div class="magazine-td">9 pages</div>
-                                        <div class="magazine-td">
-                                            <label class="custom-checkbox-cont">Free Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                            <label class="custom-checkbox-cont">Subscribed Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="magazine-td">
-                                            <div class="library-edittional additional-bt">
-                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
-                                                <div class="library-dp">
-                                                    <div>Edit article</div>
-                                                    <div>View activity</div>
-                                                    <div>Delete article</div>
+                                        <div class="tab-pane fade" id="mobile-eng">
+                                            <div class="magaz-table">
+                                                <div class="magazine-th">                                    
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                    <div class="magazine-td">Details</div>
+                                                    <div class="magazine-td">No of Pages</div>
+                                                    <div class="magazine-td">Select User Access</div>
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                </div>
+                                                <div class="magazine-tbody">
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">C</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">01</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">02</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">03</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">04</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
-                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
                                         </div>
-                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
-                                    </div>
-                                    <div class="magaz-tr">
-                                        <div class="magazine-td">02</div>
-                                        <div class="magazine-td magazin-poster-td">
-                                            <img src="img/table-magazine.png" alt="Magazine">
-                                            <div class="poster-title">Cover Page</div>
-                                        </div>
-                                        <div class="magazine-td">9 pages</div>
-                                        <div class="magazine-td">
-                                            <label class="custom-checkbox-cont">Free Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                            <label class="custom-checkbox-cont">Subscribed Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="magazine-td">
-                                            <div class="library-edittional additional-bt">
-                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
-                                                <div class="library-dp">
-                                                    <div>Edit article</div>
-                                                    <div>View activity</div>
-                                                    <div>Delete article</div>
+                                        <div class="tab-pane fade" id="web-geo">
+                                            <div class="magaz-table">
+                                                <div class="magazine-th">                                    
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                    <div class="magazine-td">Details</div>
+                                                    <div class="magazine-td">No of Pages</div>
+                                                    <div class="magazine-td">Select User Access</div>
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                </div>
+                                                <div class="magazine-tbody">
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">C</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">01</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">02</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">03</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">04</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
-                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
                                         </div>
-                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
-                                    </div>
-                                    <div class="magaz-tr">
-                                        <div class="magazine-td">03</div>
-                                        <div class="magazine-td magazin-poster-td">
-                                            <img src="img/table-magazine.png" alt="Magazine">
-                                            <div class="poster-title">Cover Page</div>
-                                        </div>
-                                        <div class="magazine-td">9 pages</div>
-                                        <div class="magazine-td">
-                                            <label class="custom-checkbox-cont">Free Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                            <label class="custom-checkbox-cont">Subscribed Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="magazine-td">
-                                            <div class="library-edittional additional-bt">
-                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
-                                                <div class="library-dp">
-                                                    <div>Edit article</div>
-                                                    <div>View activity</div>
-                                                    <div>Delete article</div>
+                                        <div class="tab-pane fade" id="mobile-geo">
+                                            <div class="magaz-table">
+                                                <div class="magazine-th">                                    
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                    <div class="magazine-td">Details</div>
+                                                    <div class="magazine-td">No of Pages</div>
+                                                    <div class="magazine-td">Select User Access</div>
+                                                    <div class="magazine-td"></div><!-- empty field is necessary -->
+                                                </div>
+                                                <div class="magazine-tbody">
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">C</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">01</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">02</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">03</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
+                                                    <div class="magaz-tr">
+                                                        <div class="magazine-td">04</div>
+                                                        <div class="magazine-td magazin-poster-td">
+                                                            <img src="img/table-magazine.png" alt="Magazine">
+                                                            <div class="poster-title">Cover Page</div>
+                                                        </div>
+                                                        <div class="magazine-td">9 pages</div>
+                                                        <div class="magazine-td">
+                                                            <div class="magazine-td-pg">5-10 pages</div>
+                                                            <div class="magazine-td-title">Title</div>
+                                                        </div>
+                                                        <div class="magazine-td">
+                                                            <div class="library-edittional additional-bt">
+                                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
+                                                                <div class="library-dp">
+                                                                    <div>Edit article</div>
+                                                                    <div>View activity</div>
+                                                                    <div>Delete article</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
+                                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
+                                                        </div>
+                                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
-                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
                                         </div>
-                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
-                                    </div>
-                                    <div class="magaz-tr">
-                                        <div class="magazine-td">04</div>
-                                        <div class="magazine-td magazin-poster-td">
-                                            <img src="img/table-magazine.png" alt="Magazine">
-                                            <div class="poster-title">Cover Page</div>
-                                        </div>
-                                        <div class="magazine-td">9 pages</div>
-                                        <div class="magazine-td">
-                                            <label class="custom-checkbox-cont">Free Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                            <label class="custom-checkbox-cont">Subscribed Users
-                                            <input type="checkbox" checked="checked">
-                                            <span class="checkmark"></span>
-                                            </label>
-                                        </div>
-                                        <div class="magazine-td">
-                                            <div class="library-edittional additional-bt">
-                                                <img src="img/dots-b.svg" alt="Dots" class="library-btn">
-                                                <div class="library-dp">
-                                                    <div>Edit article</div>
-                                                    <div>View activity</div>
-                                                    <div>Delete article</div>
-                                                </div>
-                                            </div>
-                                            <div class="additional-bt"><img src="img/full-screen-b.svg" alt="Full Screen"></div>
-                                            <div class="additional-bt"><img src="img/drag-b.svg" alt="Drag"></div>
-                                        </div>
-                                        <div class="add-line"><img src="img/plus.svg" alt=""></div>
                                     </div>
                                 </div>
                             </div>

@@ -148,6 +148,13 @@
                         <h2>Team</h2>
                         <a href=""><img src="img/home.svg" alt="Home"></a>
                     </div>
+                    <div class="datepicker-div">
+                        <input type="text" class="datepicker input" placeholder="Date from">
+                        <input type="text" class="datepicker input" placeholder="Date To">
+                    </div>
+                    <div class="search-div no-radius">
+                        <input type="text" placeholder="Search for media" class="input">
+                    </div>
                     <button class="button fill-btn" data-bs-toggle="modal" data-bs-target="#create-sprint">Create
                         Sprint</button>
                         <!-- when task tab is active show create sprint button  -->
@@ -200,7 +207,16 @@
                                     <div class="tab-content">
                                         <div class="tab-pane fade show active" id="all" role="tabpanel"
                                             aria-labelledby="all-tab">
-                                            <div class="sprint-name">Ongoing - Sprint 4</div>
+                                            <div class="sprint-name">
+                                                <div>Ongoing - Sprint 4</div>
+                                                <div class="library-edittional">
+                                                    <img src="img/dots.svg" alt="Dots" class="library-btn">
+                                                    <div class="library-dp">
+                                                        <div>Edit Sprint</div>
+                                                        <div>Delete Sprint</div>
+                                                    </div>
+                                                </div>
+                                            </div>                                 
                                             <div class="c-table-container sprint-table">
                                                 <div class="sprint-th">
                                                     <div class="sprint-td">Task ID</div>
