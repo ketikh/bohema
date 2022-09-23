@@ -32,4 +32,8 @@ $(document).ready(function () {
     $('.select2').select2({
         minimumResultsForSearch: -1
     });
+    
+    $('.user-dp ').on('click', function(){
+        $('.user-dropdown').toggleClass('show-dp');
+    })
 });
