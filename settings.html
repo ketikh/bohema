@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" width=device-width, initial-scale=1>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bohema</title>
+</head>
+
+<body>
+    <div class="modal" id="create-categorie">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="create-sprint-modal create-cat-modal">
+                        <div class="modal-h">Create Categorie</div>
+                        <div class="field">
+                            <label>Categorie Name</label>
+                            <input type="text" class="white-input">
+                            <div class="field-sublabel">Use only text and spaces, no numbers or special symbols are allowed.</div>
+                        </div>
+                        <button class="button disable-btn" data-bs-toggle="modal" data-bs-target="#create-cat-success">Create Categorie</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="create-cat-success">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="create-cat-success">
+                        <div class="txt">
+                            Are you sure you want to save the category?
+                        </div>
+                        <div class="modal-btns">
+                            <button class="button bordered-btn" data-bs-dismiss="modal"
+                                aria-label="Close">No</button>
+                            <button class="button fill-btn" data-bs-toggle="modal"
+                                data-bs-target="#create-yes">Yes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="create-yes">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="create-cat-success">
+                        <div class="txt">
+                            The category name should be unique!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1 class="h1">Bohema</h1>
+        <div class="flex flex-a-center flex-j-between">
+            <a href="activity.html" class="notification-btn"><img src="img/notification.svg" alt="Bell"></a>
+            <div class="user-dp">
+                <div class="user-image" style="background-image: url(./img/user.png);"></div>
+                <div>
+                    <div class="user-name">Salome Vastaveze</div>
+                    <div>Admin</div>
+                </div>
+                <img src="img/arr-d.svg" alt="Arrow Down" class="arrow-d">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <nav>
+                <a href="dashboard.html">Home</a>
+                <a href="team.html">Team</a>
+                <a href="chat.html">Chat</a>
+                <a href="users.html">Users</a>
+                <a href="library.html">Library</a>
+                <a href="articles.html">Articles</a>
+                <a href="magazines.html">Magazines</a>
+                <a href="subscriptions.html">Payments</a>
+                <a href="payments.html">Payments</a>
+                <a href="settings.html" class="active-a">Settings</a>
+            </nav>
+            <div class="right-panel">
+                <div class="panel-h">
+                    <div class="flex flex-a-center">
+                        <h2>Settings</h2>
+                        <a href=""><img src="img/home.svg" alt="Home"></a>
+                    </div>
+                </div>
+                <div class="right-panel-inside">
+                    <div class="team-container">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="cat-tab" data-bs-toggle="tab"
+                                    data-bs-target="#cat" type="button" role="tab" aria-controls="cat"
+                                    aria-selected="true">Categories</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="teamrole-tab" data-bs-toggle="tab" data-bs-target="#teamrole"
+                                    type="button" role="tab" aria-controls="teamrole" aria-selected="false">Roles</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="tags-tab" data-bs-toggle="tab" data-bs-target="#tags"
+                                    type="button" role="tab" aria-controls="tags" aria-selected="true">Tags</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="cat" role="tabpanel" aria-labelledby="cat-tab">
+                                <div class="cat-container">
+                                    <div class="cat-container-h">
+                                        <div class="button fill-btn" data-bs-toggle="modal" data-bs-target="#create-categorie">Create New Categorie</div>
+                                    </div>
+                                    <div class="c-table-container">
+                                        <div class="cat-th">
+                                            <div class="cat-td">Categorie ID</div>
+                                            <div class="cat-td">Categorie Title</div>
+                                            <div class="cat-td">Created On</div>
+                                            <div class="cat-td additional-btns"></div>
+                                        </div>
+                                        <div class="cat-tbody">
+                                            <!-- <div class="empty-cat-table">No categories to display</div> -->
+                                            <div class="cat-tr">
+                                                <div class="cat-td">#1</div>
+                                                <div class="cat-td">Fashion</div>
+                                                <div class="cat-td">Mar 31, 2021</div>
+                                                <div class="cat-td additional-btns">
+                                                    <div><img src="img/n-trash.svg" alt=""></div>
+                                                    <div><img src="img/n-edit.svg" alt=""></div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-tr">
+                                                <div class="cat-td">#1</div>
+                                                <div class="cat-td">Fashion</div>
+                                                <div class="cat-td">Mar 31, 2021</div>
+                                                <div class="cat-td additional-btns">
+                                                    <div><img src="img/n-trash.svg" alt=""></div>
+                                                    <div><img src="img/n-edit.svg" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-pagination">
+                                            <div class="num">1 - 100 of 2500</div>
+                                            <div class="flex">
+                                                <div class="arrows-gr"><img src="img/first-arr.svg" alt=""></div>
+                                                <div class="arrows-gr"><img src="img/arr-gr-l.svg" alt=""></div>
+                                                <div class="arrows-gr"><img src="img/arr-gr-r.svg" alt=""></div>
+                                                <div class="arrows-gr"><img src="img/last-arr.svg" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="teamrole" role="tabpanel" aria-labelledby="teamrole-tab">
+                                <div class="cat-container">
+                                    <div class="cat-container-h">
+                                        <a href="create-new-role.html" class="button fill-btn">Create New Categorie</a>
+                                    </div>
+                                    <div class="c-table-container">
+                                        <div class="cat-th">
+                                            <div class="cat-td">Categorie ID</div>
+                                            <div class="cat-td">Categorie Title</div>
+                                            <div class="cat-td">Created On</div>
+                                            <div class="cat-td additional-btns"></div>
+                                        </div>
+                                        <div class="cat-tbody">
+                                            <!-- <div class="empty-cat-table">No categories to display</div> -->
+                                            <div class="cat-tr">
+                                                <div class="cat-td">#1</div>
+                                                <div class="cat-td">Fashion</div>
+                                                <div class="cat-td">Mar 31, 2021</div>
+                                                <div class="cat-td additional-btns">
+                                                    <div><img src="img/n-trash.svg" alt=""></div>
+                                                    <div><img src="img/n-edit.svg" alt=""></div>
+                                                </div>
+                                            </div>
+                                            <div class="cat-tr">
+                                                <div class="cat-td">#1</div>
+                                                <div class="cat-td">Fashion</div>
+                                                <div class="cat-td">Mar 31, 2021</div>
+                                                <div class="cat-td additional-btns">
+                                                    <div><img src="img/n-trash.svg" alt=""></div>
+                                                    <div><img src="img/n-edit.svg" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-pagination">
+                                            <div class="num">1 - 100 of 2500</div>
+                                            <div class="flex">
+                                                <div class="arrows-gr"><img src="img/first-arr.svg" alt=""></div>
+                                                <div class="arrows-gr"><img src="img/arr-gr-l.svg" alt=""></div>
+                                                <div class="arrows-gr"><img src="img/arr-gr-r.svg" alt=""></div>
+                                                <div class="arrows-gr"><img src="img/last-arr.svg" alt=""></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tags" role="tabpanel" aria-labelledby="tags-tab">111111</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+
+        $('.show-more').on('click', function(){
+            $(this).toggleClass('show-ong');
+        });
+        $(".datepicker").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            firstDay: 1,
+            afterShow: function () {
+                $('#ui-datepicker-div').addClass('show');
+                $('.ui-datepicker select').select2({
+                    minimumResultsForSearch: -1,
+                    theme: "datepicker"
+                });
+                $('.ui-datepicker select').on("select2:open", function () {
+                    $('.select2-results').perfectScrollbar();
+                });
+            },
+        });
+
+        $.datepicker._updateDatepicker_original = $.datepicker._updateDatepicker;
+        $.datepicker._updateDatepicker = function (inst) {
+            $.datepicker._updateDatepicker_original(inst);
+            var afterShow = this._get(inst, 'afterShow');
+            if (afterShow)
+                afterShow.apply((inst.input ? inst.input[0] : null));  // trigger custom callback
+        }
+    </script>
+</body>
+
+</html>
