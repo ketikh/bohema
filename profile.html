@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" width=device-width, initial-scale=1>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/select2.min.css">
+    <link rel="stylesheet" href="css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/perfect-scrollbar.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Bohema</title>
+</head>
+
+<body>
+    <div class="modal" id="prof-changepass-suc">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close">close <img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="simple-text center-txt">
+                        Use at least one capital letter and <br> at least one number.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="prof-changepass-quest">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close"><img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="delete-user-cont">
+                        <div class="delete-modal-h">Delete User</div>
+                        <div class="txt">
+                            Are you sure you want to save changes ?
+                        </div>
+                        <div class="modal-btns">
+                            <button class="button bordered-btn" data-bs-dismiss="modal"
+                                aria-label="Close">No</button>
+                            <button class="button fill-btn" data-bs-toggle="modal"
+                                data-bs-target="#prof-changepass-suc">Yes</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="prof-changepass">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close">close <img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="changepass-prof">
+                        <div class="modal-h">Change Password</div>
+                        <div class="field">
+                            <label>Type Old Password</label>
+                            <div class="pass-field">
+                                <input type="password" class="white-input">
+                                <img src="img/eye-n.svg" alt="Eye" class="show-pass">
+                                <img src="img/eye-n-h.svg" alt="Eye" class="hide-pass">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label>Type New Password</label>
+                            <div class="pass-field">
+                                <input type="password" class="white-input">
+                                <img src="img/eye-n.svg" alt="Eye" class="show-pass">
+                                <img src="img/eye-n-h.svg" alt="Eye" class="hide-pass">
+                            </div>
+                            <div class="change-pass-adtnl-txt">Use at least one capital letter and at least one number.</div>
+                        </div>
+                        <div class="modal-btns">
+                            <button class="button bordered-btn" data-bs-dismiss="modal"
+                                aria-label="Close">Cancel</button>
+                            <button class="button fill-btn disable-btn" data-bs-toggle="modal"
+                            data-bs-target="#prof-changepass-quest">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="upload-prof-pict-suc">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <div class="right-popup-close">close <img src="img/close.svg" alt="Close"></div>
+                </button>
+                <div class="modal-body">
+                    <div class="simple-text">
+                        Image Uploaded Successfully
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="upload-prof-pict">
+        <div class="modal-dialog modal-dialog-centered lit-w-modal">
+            <div class="modal-content">
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><img src="img/close.svg" alt="Close"></span>
+                </button>
+                <div class="modal-body">
+                    <div class="add-new-media-container prof-upl">
+                        <div class="adnm-title">Upload Profile Picture</div>
+                        <div class="adnm-sub-title">GPEG, GPJ, PNG</div>
+                        <div class="file-upload">
+                            <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+                            <div class="file-upload-content">
+                                <div class="file-upload-image"></div>
+                            </div>
+                            <img src="img/upl-cam.svg" alt="">
+                            <div class="prof-inf-drag">Drag and Drop Here or Choose from <button class="file-upload-btn" type="button"
+                                onclick="$('.file-upload-input').trigger( 'click' )">Library</button></div>
+                        </div>
+                        <div class="modal-btns">
+                            <button class="button bordered-btn" data-bs-dismiss="modal"
+                                aria-label="Close">Cancel</button>
+                            <button class="button fill-btn disable-btn" data-bs-toggle="modal" data-bs-target="#upload-prof-pict-suc">Upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <h1 class="h1">Bohema</h1>
+        <div class="flex flex-a-center flex-j-between">
+            <a href="activity.html" class="notification-btn"><img src="img/notification.svg" alt="Bell"></a>
+            <div class="user-dp">
+                <div class="user-image" style="background-image: url(./img/user.png);"></div>
+                <div>
+                    <div class="user-name">Salome Vastaveze</div>
+                    <div>Admin</div>
+                </div>
+                <img src="img/arr-d.svg" alt="Arrow Down" class="arrow-d">
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="section">
+            <nav>
+                <a href="dashboard.html" class="active-a">Home</a>
+                <a href="team.html">Team</a>
+                <a href="chat.html">Chat</a>
+                <a href="users.html">Users</a>
+                <a href="library.html">Library</a>
+                <a href="articles.html">Articles</a>
+                <a href="magazines.html">Magazines</a>
+                <a href="subscriptions.html">Subscriptions</a>
+                <a href="payments.html">Payments</a>
+                <a href="reports.html">Reports</a>
+            </nav>
+            <div class="right-panel">
+                <div class="panel-h">
+                    <h2>Profile</h2>
+                    <a href=""><img src="img/home.svg" alt="Home"></a>
+                </div>
+                <div class="right-panel-inside">
+                    <div class="personal-info-container">
+                        <div class="personal-info-l">
+                            <div class="upload-wrapper flex flex-a-center">
+                                <div class="profile-upload-image">
+                                    <img src="img/profile-upl.svg" alt="Upload" class="img">
+                                </div>
+                            </div>
+                            <div class="upl-additional-btn">
+                                <button type="button" class="button bordered-btn" data-bs-toggle="modal" data-bs-target="#upload-prof-pict">Upload Profile Picture</button>
+                                <button type="button" class="button fill-btn disable-btn">Delete Profile Picture</button>
+                            </div>
+                        </div>
+                        <div class="personal-info-r">
+                            <div class="personal-info-r-h">
+                                <h2>Personal Information</h2>
+                                <button class="button bordered-btn" data-bs-toggle="modal" data-bs-target="#prof-changepass">Change Password</button>
+                            </div>
+                            <div class="personal-info-r-b">
+                                <div class="personal-info-line">
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Name</div>
+                                        <div class="pers-inf-val">Gigi</div>
+                                    </div>
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Surname</div>
+                                        <div class="pers-inf-val">Hadid</div>
+                                    </div>
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Role</div>
+                                        <div class="pers-inf-val">Art Editor</div>
+                                    </div>
+                                </div>
+                                <div class="personal-info-line">
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Email</div>
+                                        <div class="pers-inf-val">gigihadid@gmail.com</div>
+                                    </div>
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Start Date</div>
+                                        <div class="pers-inf-val">02.02.2022</div>
+                                    </div>
+                                </div>
+                                <div class="personal-info-line">
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Position</div>
+                                        <div class="admin-inp pers-inf-inp"><input type="text" value="Admin"></div>
+                                    </div>
+                                    <div class="pers-inf-bl">
+                                        <div class="pers-inf-t">Phone Number</div>
+                                        <div class="phone-inp pers-inf-inp"><input type="text" value="+995 595 00 77 88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('.image-upload-wrap').hide();
+
+                    // იმიჯის შემტხვევაში
+                    $('.file-upload-image').attr('style', "background-image: url(" + e.target.result) + ")";
+                    $('.inp-cont').html(input.files[0].name);
+                    $('.file-upload-content').show();
+                };
+
+                reader.readAsDataURL(input.files[0]);
+
+            } else {
+                removeUpload();
+            }
+        }
+
+        function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+        }
+    </script>
+</body>
+
+</html>
