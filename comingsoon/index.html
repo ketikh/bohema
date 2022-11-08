@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" width=device-width, initial-scale=1>
+    <title>Bohema</title>
+    <style>
+        @font-face {
+            font-family: 'DMSerifDisplay';
+            src: url('DMSerifDisplay-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Magrit';
+            src: url('Magrit_Georgian_Bold.ttf');
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #coming-soon {
+            font-size: 75px;
+            font-family: 'Magrit';
+        }
+
+        .h1 {
+            color: #000;
+            font-size: 34px;
+            font-family: 'DMSerifDisplay';
+            font-weight: normal;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="h1">Bohema</h1>
+        <div id="coming-soon"></div>
+    </div>
+
+    <script>
+        var i = 0;
+        var txt = 'Coming Soon...';
+        var speed = 200;
+
+        function typeWriter() {
+            if (i < txt.length) {
+                document.getElementById("coming-soon").innerHTML += txt.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+
+        typeWriter();
+    </script>
+</body>
+
+</html>
